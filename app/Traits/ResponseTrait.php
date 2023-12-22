@@ -30,12 +30,12 @@ trait ResponseTrait
    * @param int $statusCode
    * @return JsonResponse
    */
-  public function failureResponse(string $message, array $data = [], int $statusCode = Response::HTTP_NOT_FOUND)
+  public function failureResponse(string $message = '', array $data = [], int $statusCode = Response::HTTP_NOT_FOUND)
   {
     return response()->json([
       'message' => $message,
       'data'    => $data,
-      'success' => true,
+      'success' => false,
     ], $statusCode);
   }
 }

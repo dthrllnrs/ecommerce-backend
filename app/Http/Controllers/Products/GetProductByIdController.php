@@ -7,18 +7,17 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Traits\ResponseTrait;
 
-class GetProductsController extends Controller
+class GetProductByIdController extends Controller
 {
     use ResponseTrait;
 
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(Product $product)
     {
         try {
-            $products = Product::all();
-            return $this->successResponse('All products', $products);
+            return $this->successResponse('Success', $product);
         } catch (\Throwable $th) {
             return $this->failureResponse($th->getMessage(), [], 500);
         }

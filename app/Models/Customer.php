@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     use HasFactory;
+
+    /**
+     * Mass assignable columns
+     */
+    protected $fillable = ['firstname', 'lastname', 'email'];
 }

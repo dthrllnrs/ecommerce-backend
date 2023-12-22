@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Products\GetProductsController;
+use App\Http\Controllers\Products\GetProductByIdController;
+use App\Http\Controllers\Orders\CreateOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +19,9 @@ use App\Http\Controllers\Products\GetProductsController;
 
 Route::prefix('products')->group(function() {
     Route::get('', GetProductsController::class);
+    Route::get('/{product}', GetProductByIdController::class);
+});
+
+Route::prefix('orders')->group(function() {
+    Route::post('create', CreateOrderController::class);
 });
