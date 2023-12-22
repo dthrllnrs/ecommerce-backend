@@ -13,7 +13,7 @@ phases:
     on-failure: ABORT
     commands:
       - cp .env.prod .env
-      - docker build -t docker build -t prod-ecommerce-backend . .
+      - docker build -t docker build -t prod-ecommerce-backend .
       - docker tag prod-ecommerce-backend:latest 768148000790.dkr.ecr.ap-southeast-1.amazonaws.com/prod-ecommerce-backend:latest
   post_build:
     on-failure: ABORT
