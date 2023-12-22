@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
@@ -21,7 +22,7 @@ class ProductFactory extends Factory
             'short_description'   => fake()->sentence(),
             'description' => fake()->paragraph(),
             'price' => fake()->numberBetween(1, 1000),
-            'thumbnail' => fake()->image('public/storage/images', 640, 640, 'products', false, true, null, true)
+            'thumbnail' => fake()->image(public_path('storage/images'), 640, 640, 'products', false, true, null, true)
         ];
     }
 }

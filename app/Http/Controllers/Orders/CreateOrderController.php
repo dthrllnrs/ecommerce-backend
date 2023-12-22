@@ -8,6 +8,8 @@ use App\Traits\ResponseTrait;
 use Illuminate\Support\Facades\DB;
 use App\Models\Order;
 use App\Models\Customer;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderCreatedEmail;
 
 class CreateOrderController extends Controller
 {
@@ -37,6 +39,7 @@ class CreateOrderController extends Controller
             $order->save();
 
             DB::commit();
+            $this->sendOrderCreatedEmail($order);
 
             return $this->successResponse('Order created successfuly', $order, 201);
         } catch (\Throwable $th) {
@@ -65,5 +68,10 @@ class CreateOrderController extends Controller
         $result = array_combine($ids, $productsWithoutIds);
 
         return $result;
+    }
+
+    private function sendOrderCreatedEmail($order) {
+        Mail::to($order->customer->email)
+            ->send(new OrderCreatedEmail($order));
     }
 }

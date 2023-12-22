@@ -13,6 +13,13 @@ class Order extends Model
     use HasFactory;
 
     /**
+     * Relationships that should always be loaded
+     * 
+     * @var array
+     */
+    protected $with = ['customer', 'products'];
+
+    /**
      * Get the customer associated with the order
      */
     public function customer(): BelongsTo
@@ -25,6 +32,6 @@ class Order extends Model
      */
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'order_products');
+        return $this->belongsToMany(Product::class, 'order_products')->withPivot(['quantity', 'total']);
     }
 }

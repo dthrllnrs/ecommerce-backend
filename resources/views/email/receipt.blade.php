@@ -8,6 +8,9 @@ html {
     -webkit-text-size-adjust: none;
     -ms-text-size-adjust: none;
 }
+.text-primary {
+	color: #42b883 !important;
+}
 @media only screen and (max-device-width:660px),only screen and (max-width:660px) {
     .em-mob-width-100perc {
         width: 100%!important;
@@ -74,7 +77,7 @@ html {
 								<td align="left">
 <div em="atom">
   <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
-  <div style="font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 24px; color: #333333;"><span style="color: #082846;"><strong><span style="font-size: 22px;">Dear [Customer Name],</span></strong></span><br><br><span style="color: #082846;">Thank you for your recent purchase from [Company Name]. We're thrilled that you chose us for your [product or service] needs.</span><br><br><span style="color: #082846;">Here are the details of your order:</span><br><br><span style="color: #082846;"><strong>Order Number</strong>: [Order Number]</span><br><br><span style="color: #082846;"><strong>Date</strong>: [Date and Time of Purchase]</span><br></div>
+  <div style="font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 24px; color: #333333;"><span style="color: #082846;"><strong><span style="font-size: 22px;">Dear <span class="text-primary">{{$order->customer->firstname}}</span>,</span></strong></span><br><br><span style="color: #082846;">Thank you for your recent purchase from <span class="text-primary" style="font-weight: bold">PurchasePro</span>. We're thrilled that you chose us for your <span class="text-primary">Real Estate</span> needs.</span><br><br><span style="color: #082846;">Here are the details of your order:</span><br><br><span style="color: #082846;"><strong>Order Number</strong>: {{ $order->id }}</span><br><br><span style="color: #082846;"><strong>Date</strong>: {{date('d-m-Y', strtotime($order->created_at));}}</span><br></div>
 </div>
 </td>
 							</tr>
@@ -118,72 +121,30 @@ html {
 																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
 															</td>
 														</tr>
-														<tr em="atom">
-															<td width="13%" style="border-bottom: 1px solid #c0c0c0;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank"><img src="https://cdn.useblocks.io/1865/221025_18_6OhuYGr.png" width="60" border="0" alt="" style="display: inline-block; width: 100%; max-width: 60px;"></a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank" style="line-height: normal; font-size: 13px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: color: text-decoration:">Product/service name</a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
-															</td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">X</div>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">$XX.XX</div>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-														</tr>
-														<tr em="atom">
-															<td width="13%" style="border-bottom: 1px solid #c0c0c0;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank"><img src="https://cdn.useblocks.io/1865/221025_18_iGPfBzG.png" width="60" border="0" alt="" style="display: inline-block; width: 100%; max-width: 60px;"></a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank" style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: color: text-decoration:">Product/service name</a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
-															</td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">X</div>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">$XX.XX
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</div></td>
-														</tr>
-														<tr em="atom">
-															<td width="13%" style="border-bottom: 1px solid #c0c0c0;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank"><img src="https://cdn.useblocks.io/1865/221025_18_Y4H4LgY.png" width="60" border="0" alt="" style="display: inline-block; width: 100%; max-width: 60px;"></a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<a href="" target="_blank" style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: color: text-decoration:">Product/service name</a>
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; " ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">X
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</div></td>
-															<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">$XX.XX
-																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-															</div></td>
-														</tr>
+														@foreach ($order->products as $product)
+															<tr em="atom">
+																<td width="13%" style="border-bottom: 1px solid #c0c0c0;">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																	<a href="" target="_blank"><img src="{{ asset('storage/images/'.$product->thumbnail) }}" width="60" border="0" alt="" style="display: inline-block; width: 100%; max-width: 60px;"></a>
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																</td>
+																<td style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																	<a href="" target="_blank" style="line-height: normal; font-size: 13px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: color: text-decoration:">{{ $product->name }}</a>
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
+																</td>
+																<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																	<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">{{ $product->pivot->quantity }}</div>
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																</td>
+																<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																	<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">${{number_format($product->price, 2, ',', '.')}}</div>
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
+																</td>
+															</tr>
+														@endforeach
 													</table>
 													<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
 														<tr>
@@ -199,7 +160,7 @@ html {
 																		</strong></div></td>
 																		<td width="50">&nbsp;</td>
 																		<td align="right">
-																			<div style="font-family: font-family-4remove-0, -apple-system, " ui="" helvetica="" neue="" font-size:="" line-height:="" color:=""><st></st><strong style="line-height: 21px; color: #082846; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px">$XX.XX<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
+																			<div style="font-family: font-family-4remove-0, -apple-system, " ui="" helvetica="" neue="" font-size:="" line-height:="" color:=""><st></st><strong class="text-primary" style="line-height: 21px; color: #082846; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px">${{number_format($order->total, 2, ',', '.')}}<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
 																		</strong></div></td>
 																	</tr>
 																	<tr><td width="50">&nbsp;</td></tr>
