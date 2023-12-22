@@ -29,6 +29,7 @@ services:
     user: root
     volumes:
       - ./:/var/www/html
+      - ./storage/public/storage/:/var/www/html/public/storage
     working_dir: /var/www/html
   
   mysql:

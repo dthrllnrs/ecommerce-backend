@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/mailable', function () {
-    $order = App\Models\Order::find(4);
+    $order = App\Models\Order::find(2);
     return new App\Mail\OrderCreatedEmail($order);
 });
