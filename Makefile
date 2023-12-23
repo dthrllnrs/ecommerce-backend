@@ -27,22 +27,22 @@ init-dev: build-dev up laravel-env laravel-composer-install laravel-key laravel-
 #-----------------------------------------------------------
 
 php-fpm:
-	docker-compose exec php-fpm bash
+	docker-compose exec php:8.1-fpm bash
 
 laravel-env-dev:
-	docker-compose exec php-fpm cp .env.example .env
+	docker-compose exec php:8.1-fpm cp .env.example .env
 
 laravel-env:
-	docker-compose exec php-fpm cp .env.production .env
+	docker-compose exec php:8.1-fpm cp .env.production .env
 
 laravel-composer-install:
-	docker-compose exec php-fpm composer install
+	docker-compose exec php:8.1-fpm composer install
 
 laravel-key:
-	docker-compose exec php-fpm php artisan key:generate
+	docker-compose exec php:8.1-fpm php artisan key:generate
 
 laravel-symlink:
-	docker-compose exec php-fpm php artisan storage:link
+	docker-compose exec php:8.1-fpm php artisan storage:link
 
 laravel-migrate:
-	docker-compose exec php-fpm php artisan migrate:refresh --seed
+	docker-compose exec php:8.1-fpm php artisan migrate:refresh --seed
