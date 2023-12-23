@@ -1301,3 +1301,4 @@
 172.21.0.1 - - [23/Dec/2023:12:31:58 +0000] "GET /storage/images/275d30d40ee787ea0c610e9ec31f70fe.png HTTP/1.1" 404 6622 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 172.21.0.1 - - [23/Dec/2023:12:32:44 +0000] "GET /storage/images/275d30d40ee787ea0c610e9ec31f70fe.png HTTP/1.1" 404 6622 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 172.21.0.1 - - [23/Dec/2023:12:33:05 +0000] "GET /storage/images/bd0b7cbbbf71406929f2e9267af356fd.png HTTP/1.1" 404 6622 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+172.24.0.1 - - [23/Dec/2023:12:43:51 +0000] "GET / HTTP/1.1" 200 27551 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
