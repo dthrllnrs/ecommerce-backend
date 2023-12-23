@@ -12,7 +12,7 @@ build-dev:
 	docker-compose build -f docker-compose.local.yml
 
 build:
-	docker-compose build -d
+	docker-compose build
 
 #-----------------------------------------------------------
 # Initial installation

@@ -27,6 +27,7 @@ services:
       context: docker/php
       dockerfile: Dockerfile
     user: root
+    entrypoint: [ "chmod", "+x", "docker/entrypoint.sh" ]
     volumes:
       - ./:/var/www/html
       - ./storage/public/storage/:/var/www/html/public/storage
