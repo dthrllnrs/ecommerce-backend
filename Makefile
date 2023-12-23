@@ -29,8 +29,11 @@ init-dev: build-dev up laravel-env laravel-composer-install laravel-key laravel-
 php-fpm:
 	docker-compose exec php-fpm bash
 
-laravel-env:
+laravel-env-dev:
 	docker-compose exec php-fpm cp .env.example .env
+
+laravel-env:
+	docker-compose exec php-fpm cp .env.production .env
 
 laravel-composer-install:
 	docker-compose exec php-fpm composer install
