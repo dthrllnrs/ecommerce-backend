@@ -18,7 +18,7 @@ build:
 # Initial installation
 #-----------------------------------------------------------
 
-init: build laravel-env laravel-composer-install laravel-key
+init: build laravel-env laravel-composer-install laravel-key laravel-migrate
 
 init-dev: build-dev laravel-env-dev laravel-composer-install-dev laravel-key laravel-migrate
 
