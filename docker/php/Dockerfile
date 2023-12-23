@@ -1,5 +1,5 @@
 # Image
-FROM php:8.1-fpm
+FROM php:8.1-fpm as php
 
 # Initialize
 RUN apt-get update
