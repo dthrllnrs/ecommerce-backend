@@ -8,14 +8,19 @@ up:
 down:
 	docker-compose down
 
+build-dev:
+	docker-compose build -f docker-compose.local.yml
+
 build:
-	docker-compose build --no-cache
+	docker-compose build -d
 
 #-----------------------------------------------------------
 # Initial installation
 #-----------------------------------------------------------
 
 init: build up laravel-env laravel-composer-install laravel-key laravel-migrate
+
+init-dev: build-dev up laravel-env laravel-composer-install laravel-key laravel-migrate
 
 #-----------------------------------------------------------
 # Laravel Commands
