@@ -117,7 +117,7 @@ html {
 																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="15"></td></tr></table>
 															</td>
 															<td valign="top" align="right" style="border-bottom: 1px solid #c0c0c0;">
-																<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: line-height: color: white-space: padding:">Price/piece</div>
+															<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="" white-space:="" padding:="">Price each</div>
 																<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
 															</td>
 														</tr>
@@ -130,7 +130,7 @@ html {
 																</td>
 																<td style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
 																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																	<a href="" target="_blank" style="line-height: normal; font-size: 13px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: color: text-decoration:">{{ $product->name }}</a>
+																	<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">{{ $product->name }}</div>
 																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
 																</td>
 																<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
