@@ -160,7 +160,7 @@ html {
 																		</strong></div></td>
 																		<td width="50">&nbsp;</td>
 																		<td align="right">
-																			<div style="font-family: font-family-4remove-0, -apple-system, " ui="" helvetica="" neue="" font-size:="" line-height:="" color:=""><st></st><strong class="text-primary" style="line-height: 21px; color: #082846; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px">${{number_format($order->total, 2, ',', '.')}}<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
+																			<div style="font-family: font-family-4remove-0, -apple-system, " ui="" helvetica="" neue="" font-size:="" line-height:="" color:=""><st></st><strong class="text-primary" style="line-height: 21px; color: #082846; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px">${{number_format($order->total, 2, '.', ',')}}<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="10"></td></tr></table>
 																		</strong></div></td>
 																	</tr>
 																	<tr><td width="50">&nbsp;</td></tr>
