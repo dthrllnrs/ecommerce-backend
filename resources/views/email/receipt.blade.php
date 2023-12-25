@@ -140,7 +140,7 @@ html {
 																</td>
 																<td align="right" style="border-bottom: 1px solid #c0c0c0; padding: 0 10px;">
 																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
-																	<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">${{number_format($product->price, 2, ',', '.')}}</div>
+																	<div style="line-height: normal; font-size: 14px; font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" ui="" helvetica="" neue="" font-size:="" line-height:="" color:="">${{number_format($product->price, 2, '.', ',')}}</div>
 																	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="20"></td></tr></table>
 																</td>
 															</tr>
