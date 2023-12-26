@@ -18,7 +18,7 @@ class GetProductsController extends Controller
     {
         try {
             $products = Product::all();
-            return $this->successResponse('All products', $products);
+            return $this->successResponse('All products', $products, 200);
         } catch (\Throwable $th) {
             return $this->failureResponse($th->getMessage(), [], 500);
         }
